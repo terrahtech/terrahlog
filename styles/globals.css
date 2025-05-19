@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    --font-poppins: 'Poppins', sans-serif;
+    --primary: #21213b;
+    --light: #eef1fa;
+    --secondary: #b6c4ff;
+    --hover: #1f1f48;
+    --text-light:#1f2937;
+    --card:#fff;
+    --warning:#FFCD36;
+    --border: #9898985e;
+    --input-bg: #fff;
+
+
+  }
+  :root .dark-mode  {
+    --light: #11112b;
+    --secondary: #464682;
+    color: white;
+    --text-light:#fff;
+    --card:#191931;
+    --input-bg: #24243a;
+
+
+  }
+  
+  /* Use the CSS variable as font-family for body */
+  body {
+    font-family: var(--font-poppins);
+    background-color: var(--light);
+  }
+
+  .active-nav{
+    position: relative;
+  }
+  .active-nav::before{
+  content: '';
+  position: absolute;
+  right: -16px;
+  top: 0;
+  width: 7px;
+  height: 100%;
+  background-color: var(--secondary);
+  border-radius: 6px 0 0 6px;
+  }
+
+  .vertical-text{
+    transform:rotate(90deg) translateY(-45px);
+  }
+
+  .dark-input button, .dark-input ul, .login-form input{
+    background-color: #24243a;
+
+  }
+  .active-nav {
+    background: #464682;
+    }
+  @media (max-width: 768px) {
+    .active-nav::before{
+        right: -8px;
+        width: 5px;
+    }
+}

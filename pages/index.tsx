@@ -1,13 +1,14 @@
-import Link from "next/link";
-import Layout from "../components/Layout";
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">About</Link>
-    </p>
-  </Layout>
-);
+const IndexPage = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.replace('/login');
+  }, [router]);
+
+  return null; // or a loading spinner while redirecting
+};
 
 export default IndexPage;

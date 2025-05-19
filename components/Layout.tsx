@@ -1,32 +1,33 @@
-import React, { ReactNode } from "react";
-import Link from "next/link";
-import Head from "next/head";
+'use client';
+import { FC, ReactNode, useState, useEffect } from 'react';
+import Sidebar from './Sidebar';
+import Header from './Header';
+import ThemeToggle from './ThemeToggle';
 
-type Props = {
-  children?: ReactNode;
-  title?: string;
-};
+export default function Layout({ children }: { children: React.ReactNode }) {
+  const [collapsed, setCollapsed] = useState(false);
 
-const Layout = ({ children, title = "This is the default title" }: Props) => (
-  <div>
-    <Head>
-      <title>{title}</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
-    <header>
-      <nav>
-        <Link href="/">Home</Link> | <Link href="/about">About</Link> |{" "}
-        <Link href="/users">Users List</Link> |{" "}
-        <a href="/api/users">Users API</a>
-      </nav>
-    </header>
-    {children}
-    <footer>
-      <hr />
-      <span>I'm here to stay (Footer)</span>
-    </footer>
-  </div>
-);
+  useEffect(() => {
+    // Collapse sidebar on small screens initially
+    const handleResize = () => {
+      setCollapsed(window.innerWidth < 768);
+    };
 
-export default Layout;
+    handleResize(); // run on initial load
+    window.addEventListener('resize', handleResize); // optional: auto-collapse on resize
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return (
+    <div className="flex">
+      <Sidebar collapsed={collapsed} setCollapsed={setCollapsed} />
+      <div className={`transition-all duration-300  ${collapsed ? 'ml-14 md:ml-20' : 'ml-14 md:ml-64'} w-full`}>
+        <Header collapsed={collapsed} />
+        <main className="mt-16 px-6 py-2 min-h-[calc(100vh-4rem)]">{children}</main>
+      </div>
+      
+      <ThemeToggle />
+    </div>
+  );
+}
