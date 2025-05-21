@@ -10,7 +10,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     // Collapse sidebar on small screens initially
     const handleResize = () => {
-      setCollapsed(window.innerWidth < 768);
+      setCollapsed(window.innerWidth < 990git );
     };
 
     handleResize(); // run on initial load
