@@ -44,7 +44,7 @@
   top: 0;
   width: 7px;
   height: 100%;
-  background-color: var(--secondary);
+  background-color: var(--warning);
   border-radius: 6px 0 0 6px;
   }
 
