@@ -1,9 +1,15 @@
-import Layout from '../components/Layout';
+import Layout from '../../components/Layout';
 import { FiInfo } from 'react-icons/fi';
 import { FaRegListAlt, FaChartLine, FaCalendarAlt } from 'react-icons/fa';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useState } from 'react';
+import ProgressCard from '../../components/ProgressCard';
+import WeeklyBarChartCard from '../../components/WeeklyBarChartCard';
+
+
+
+
 
 export default function Dashboard() {
   const [startDate, setStartDate] = useState(new Date());
@@ -50,9 +56,9 @@ export default function Dashboard() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1  lg:grid-cols-3 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1  lg:grid-cols-2 md:grid-cols-2 gap-6">
         {/* Profile Card */}
-        <div className="bg-[var(--card)] p-4 rounded-xl flex justify-between items-center">
+        {/* <div className="bg-[var(--card)] p-4 rounded-xl flex justify-between items-center">
           <div className="flex gap-4">
             <div className="w-16 h-16 bg-[var(--primary)] text-white font-bold text-xl rounded-xl flex items-center justify-center">
               NK
@@ -63,32 +69,24 @@ export default function Dashboard() {
               <div className="text-sm mt-1">👨‍💻 Employee</div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Today Card */}
+        {/* Today Card */}
         <div className="bg-[var(--card)] p-4 rounded-xl flex flex-col justify-between">
-          <div>
-            <h2 className="font-medium">Today</h2>
-            <p className="text-3xl font-semibold mt-2">0:00</p>
-            <p className="text-sm text-orange-500 mt-1">
-              0% yesterday <span className="bg-purple-200 text-purple-700 text-xs px-2 py-0.5 rounded ml-1">0m</span>
-            </p>
-          </div>
-          <div className="mt-4 h-1.5 w-full bg-[var(--secondary)] rounded-full relative">
-            <div className="w-1/4 h-full bg-[var(--primary)] rounded-full"></div>
-          </div>
+        
+            <ProgressCard time="0:00" percent={70} yesterdayMinutes="0m" />
+          
         </div>
+
 
         {/* This Week Card */}
         <div className="bg-[var(--card)] p-4 rounded-xl flex flex-col justify-between">
-          <div className="flex justify-between items-center">
-            <h2 className="font-medium">This Week</h2>
-            <FaChartLine className="text-red-400" />
-          </div>
-          <p className="text-3xl font-semibold mt-2">28:00</p>
-          <p className="text-sm text-red-500 mt-1">
-            -29% Last week <span className="bg-purple-200 text-purple-700 text-xs px-2 py-0.5 rounded ml-1">39h 30m</span>
-          </p>
+          <WeeklyBarChartCard
+            time="28:00"
+            percentChange={-29}
+            lastWeekTime="39h 30m"
+          />
         </div>
 
         {/* Projects Card */}

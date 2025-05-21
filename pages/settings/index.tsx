@@ -1,11 +1,11 @@
-import Layout from '../components/Layout';
+import Layout from '../../components/Layout';
 import React, { useState } from 'react';
 import { FaCalendarAlt } from 'react-icons/fa';
 import { FiLogOut } from 'react-icons/fi';
-import CustomSelect from '../components/CustomSelect';
+import CustomSelect from '../../components/CustomSelect';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import { useAppSelector, useAppDispatch } from '../store/hooks';
+import { useAppSelector, useAppDispatch } from '../../store/hooks';
 
 const SettingsPage = () => {
 

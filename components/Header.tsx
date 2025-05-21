@@ -36,7 +36,8 @@ const Header: FC<HeaderProps> = ({ collapsed }) => {
           <button className='w-6 h-6 p-1 flex items-center justify-center rounded-[30px] bg-[var(--primary)] '><FiPlay size={14} className="text-white" /></button>
           00:00:00
         </div>
-        </div>
+        {/* <h1 className="text-xl font-bold border-l-2 border-l-[var(--secondary)] pl-3">Dashboard</h1> */}
+      </div>
       <div className="flex items-center gap-4 relative">
         <button className="relative text-white  p-1 rounded">
           <FiBell size={20} className='text-[var(--text-light)]' />

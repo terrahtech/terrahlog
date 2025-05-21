@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { useRouter } from 'next/router';
-import { FiHome, FiClock, FiUsers, FiBarChart2, FiSettings, FiMenu } from 'react-icons/fi';
+import { FiHome, FiClock, FiUsers, FiBarChart2, FiSettings, FiMenu, FiLayers, FiClipboard, FiUserX } from 'react-icons/fi';
 import Link from 'next/link';
 
 interface SidebarProps {
@@ -22,11 +22,21 @@ const Sidebar: FC<SidebarProps> = ({ collapsed, setCollapsed }) => {
     </div>
     <div className="flex flex-col p-2 md:p-4 space-y-4 h-full justify-between">
       <nav className="flex flex-col space-y-4">
-        <Link href="/dashboard" className={`mt-3 flex items-center gap-3 p-2 hover:bg-[var(--hover)]  rounded ${collapsed ? 'justify-center' : ''} ${router.pathname === '/dashboard' ? 'active-nav' : ''}`}>
+        <Link href="/dashboard" className={`mt-3 flex items-center gap-3 p-2 hover:bg-[var(--hover)]  rounded ${collapsed ? 'justify-center' : ''} ${router.pathname === '/dashboard/index' ? 'active-nav' : ''}`}>
           <FiHome size={22} /> {!collapsed &&<span>Dashboard</span>}
         </Link>
         <Link href="#" className={`mt-3 flex items-center gap-3 p-2 hover:bg-[var(--hover)]  rounded ${collapsed ? 'justify-center' : ''} ${router.pathname === '/time_sheet' ? 'active-nav' : ''}`}>
+          
           <FiClock size={22} /> {!collapsed &&<span>Timesheet</span>}
+        </Link>
+        <Link href="#" className={`mt-3 flex items-center gap-3 p-2 hover:bg-[var(--hover)]  rounded ${collapsed ? 'justify-center' : ''} ${router.pathname === '/time_sheet' ? 'active-nav' : ''}`}>
+          <FiLayers size={22} /> {!collapsed &&<span>Projects</span>}
+        </Link>
+        <Link href="#" className={`mt-3 flex items-center gap-3 p-2 hover:bg-[var(--hover)]  rounded ${collapsed ? 'justify-center' : ''} ${router.pathname === '/time_sheet' ? 'active-nav' : ''}`}>
+          <FiClipboard size={22} /> {!collapsed &&<span>My Tasks</span>}
+        </Link>
+        <Link href="#" className={`mt-3 flex items-center gap-3 p-2 hover:bg-[var(--hover)]  rounded ${collapsed ? 'justify-center' : ''} ${router.pathname === '/time_sheet' ? 'active-nav' : ''}`}>
+          <FiUserX size={22} /> {!collapsed &&<span>Leaves</span>}
         </Link>
         <Link href="#" className={`mt-3 flex items-center gap-3 p-2 hover:bg-[var(--hover)]  rounded ${collapsed ? 'justify-center' : ''} ${router.pathname === '/people' ? 'active-nav' : ''}`}>
           <FiUsers size={22} /> {!collapsed &&<span>People</span>}
@@ -35,7 +45,7 @@ const Sidebar: FC<SidebarProps> = ({ collapsed, setCollapsed }) => {
           <FiBarChart2 size={22} /> {!collapsed &&<span>Reports</span>}
         </Link>
       </nav>
-      <Link href="/settings" className={` mt-3 flex items-center gap-3 p-2 hover:bg-[var(--hover)]  rounded ${collapsed ? 'justify-center' : ''} ${router.pathname === '/settings' ? 'active-nav' : ''}`}>
+      <Link href="/settings" className={` mt-3 flex items-center gap-3 p-2 hover:bg-[var(--hover)]  rounded ${collapsed ? 'justify-center' : ''} ${router.pathname === '/settings/index' ? 'active-nav' : ''}`}>
         <FiSettings size={22} /> {!collapsed &&<span>Settings</span>}
       </Link>
     </div>

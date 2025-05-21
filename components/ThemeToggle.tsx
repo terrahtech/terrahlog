@@ -25,11 +25,11 @@ export default function ThemeToggle() {
 
   return (
     <div className="fixed right-2 top-[40%] z-50 ">
-      <div className="vertical-text bg-[var(--secondary)] rounded-full overflow-hidden shadow-lg">
+      <div className="vertical-text bg-white rounded-full overflow-hidden shadow-lg">
         <button
           onClick={() => setTheme('light')}
           className={`py-2 px-4 text-sm font-medium transition ${
-            theme === 'light' ? 'bg-white text-black' : 'text-gray-100'
+            theme === 'light' ? 'bg-[var(--warning)] text-black' : 'text-gray-800'
           }`}
         >
           Light
@@ -37,7 +37,7 @@ export default function ThemeToggle() {
         <button
           onClick={() => setTheme('dark')}
           className={`py-2 px-4 text-sm font-medium transition ${
-            theme === 'dark' ? 'bg-white text-black' : 'text-gray-800'
+            theme === 'dark' ? 'bg-[var(--warning)] text-black' : 'text-gray-800'
           }`}
         >
           Dark
