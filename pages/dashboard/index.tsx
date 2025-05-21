@@ -75,7 +75,7 @@ export default function Dashboard() {
         {/* Today Card */}
         <div className="bg-[var(--card)] p-4 rounded-xl flex flex-col justify-between">
         
-            <ProgressCard time="0:00" percent={70} yesterdayMinutes="0m" />
+            <ProgressCard percent={70} yesterdayMinutes="0m" />
           
         </div>
 
@@ -83,7 +83,7 @@ export default function Dashboard() {
         {/* This Week Card */}
         <div className="bg-[var(--card)] p-4 rounded-xl flex flex-col justify-between">
           <WeeklyBarChartCard
-            time="28:00"
+          
             percentChange={-29}
             lastWeekTime="39h 30m"
           />
