@@ -22,30 +22,30 @@ const Sidebar: FC<SidebarProps> = ({ collapsed, setCollapsed }) => {
     </div>
     <div className="flex flex-col p-2 md:p-4 space-y-4 h-full justify-between">
       <nav className="flex flex-col space-y-4">
-        <Link href="/dashboard" className={`mt-3 flex items-center gap-3 p-2 hover:bg-[var(--hover)]  rounded ${collapsed ? 'justify-center' : ''} ${router.pathname === '/dashboard/index' ? 'active-nav' : ''}`}>
+        <Link href="/dashboard" className={`mt-3 flex items-center gap-3 p-2 hover:bg-[var(--hover)]  rounded ${collapsed ? 'justify-center' : ''} ${router.pathname.startsWith('/dashboard') ? 'active-nav' : ''}`}>
           <FiHome size={22} /> {!collapsed &&<span>Dashboard</span>}
         </Link>
-        <Link href="#" className={`mt-3 flex items-center gap-3 p-2 hover:bg-[var(--hover)]  rounded ${collapsed ? 'justify-center' : ''} ${router.pathname === '/time_sheet' ? 'active-nav' : ''}`}>
+        <Link href="#" className={`mt-3 flex items-center gap-3 p-2 hover:bg-[var(--hover)]  rounded ${collapsed ? 'justify-center' : ''} ${router.pathname.startsWith('/time_sheet') ? 'active-nav' : ''}`}>
           
           <FiClock size={22} /> {!collapsed &&<span>Timesheet</span>}
         </Link>
-        <Link href="#" className={`mt-3 flex items-center gap-3 p-2 hover:bg-[var(--hover)]  rounded ${collapsed ? 'justify-center' : ''} ${router.pathname === '/time_sheet' ? 'active-nav' : ''}`}>
+        <Link href="#" className={`mt-3 flex items-center gap-3 p-2 hover:bg-[var(--hover)]  rounded ${collapsed ? 'justify-center' : ''} ${router.pathname.startsWith('/time_sheet') ? 'active-nav' : ''}`}>
           <FiLayers size={22} /> {!collapsed &&<span>Projects</span>}
         </Link>
-        <Link href="#" className={`mt-3 flex items-center gap-3 p-2 hover:bg-[var(--hover)]  rounded ${collapsed ? 'justify-center' : ''} ${router.pathname === '/time_sheet' ? 'active-nav' : ''}`}>
-          <FiClipboard size={22} /> {!collapsed &&<span>My Tasks</span>}
+        <Link href="/tasks" className={`mt-3 flex items-center gap-3 p-2 hover:bg-[var(--hover)] rounded ${collapsed ? 'justify-center' : ''} ${router.pathname.startsWith('/tasks') ? 'active-nav' : ''}`}>
+          <FiClipboard size={22} /> {!collapsed && <span>My Tasks</span>}
         </Link>
-        <Link href="#" className={`mt-3 flex items-center gap-3 p-2 hover:bg-[var(--hover)]  rounded ${collapsed ? 'justify-center' : ''} ${router.pathname === '/time_sheet' ? 'active-nav' : ''}`}>
+        <Link href="#" className={`mt-3 flex items-center gap-3 p-2 hover:bg-[var(--hover)]  rounded ${collapsed ? 'justify-center' : ''} ${router.pathname.startsWith('/time_sheet') ? 'active-nav' : ''}`}>
           <FiUserX size={22} /> {!collapsed &&<span>Leaves</span>}
         </Link>
-        <Link href="#" className={`mt-3 flex items-center gap-3 p-2 hover:bg-[var(--hover)]  rounded ${collapsed ? 'justify-center' : ''} ${router.pathname === '/people' ? 'active-nav' : ''}`}>
+        <Link href="#" className={`mt-3 flex items-center gap-3 p-2 hover:bg-[var(--hover)]  rounded ${collapsed ? 'justify-center' : ''} ${router.pathname.startsWith('/time_sheet') ? 'active-nav' : ''}`}>
           <FiUsers size={22} /> {!collapsed &&<span>People</span>}
         </Link>
-        <Link href="#" className={`mt-3 flex items-center gap-3 p-2 hover:bg-[var(--hover)]  rounded ${collapsed ? 'justify-center' : ''} ${router.pathname === '/reports' ? 'active-nav' : ''}`}>
+        <Link href="#" className={`mt-3 flex items-center gap-3 p-2 hover:bg-[var(--hover)]  rounded ${collapsed ? 'justify-center' : ''} ${router.pathname.startsWith('/time_sheet') ? 'active-nav' : ''}`}>
           <FiBarChart2 size={22} /> {!collapsed &&<span>Reports</span>}
         </Link>
       </nav>
-      <Link href="/settings" className={` mt-3 flex items-center gap-3 p-2 hover:bg-[var(--hover)]  rounded ${collapsed ? 'justify-center' : ''} ${router.pathname === '/settings/index' ? 'active-nav' : ''}`}>
+      <Link href="/settings" className={` mt-3 flex items-center gap-3 p-2 hover:bg-[var(--hover)]  rounded ${collapsed ? 'justify-center' : ''} ${router.pathname.startsWith('/settings') ? 'active-nav' : ''}`}>
         <FiSettings size={22} /> {!collapsed &&<span>Settings</span>}
       </Link>
     </div>

@@ -1,11 +1,11 @@
 import Layout from '../../components/Layout';
 import { FiInfo } from 'react-icons/fi';
-import { FaRegListAlt, FaChartLine, FaCalendarAlt } from 'react-icons/fa';
+import { FaRegListAlt, FaCalendarAlt } from 'react-icons/fa';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useState } from 'react';
-import ProgressCard from '../../components/ProgressCard';
-import WeeklyBarChartCard from '../../components/WeeklyBarChartCard';
+import ProgressCard from '../../components/dashboard/ProgressCard';
+import WeeklyBarChartCard from '../../components/dashboard/WeeklyBarChartCard';
 
 
 
