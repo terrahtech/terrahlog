@@ -8,22 +8,24 @@
     --primary: #21213b;
     --light: #eef1fa;
     --secondary: #b6c4ff;
-    --hover: #1f1f48;
+    --hover:  #5b5ba2 ;
     --text-light:#1f2937;
     --card:#fff;
     --warning:#FFCD36;
     --border: #9898985e;
     --input-bg: #fff;
+    --black:#000;
 
 
   }
   :root .dark-mode  {
     --light: #11112b;
-    --secondary: #464682;
+    --secondary: ;
     color: white;
     --text-light:#fff;
     --card:#191931;
     --input-bg: #24243a;
+    --black:#fff;
 
 
   }

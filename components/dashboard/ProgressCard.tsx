@@ -79,7 +79,7 @@ const ProgressCard: FC<ProgressCardProps> = ({ percent, yesterdayMinutes }) => {
             y="50%"
             textAnchor="middle"
             dominantBaseline="middle"
-            className="fill-[var(--text)] text-md font-semibold"
+            className="fill-[var(--black)] text-md font-semibold"
           >
             {formattedTime}
           </text>
