@@ -29,9 +29,10 @@ const Sidebar: FC<SidebarProps> = ({ collapsed, setCollapsed }) => {
           
           <FiClock size={22} /> {!collapsed &&<span>Timesheet</span>}
         </Link>
-        <Link href="#" className={`mt-3 flex items-center gap-3 p-2 hover:bg-[var(--hover)]  rounded ${collapsed ? 'justify-center ' : ''} ${router.pathname.startsWith('/time_sheet') ? 'active-nav' : ''}`}>
+        <Link href="/projects" className={`mt-3 flex items-center gap-3 p-2 hover:bg-[var(--hover)]  rounded ${collapsed ? 'justify-center ' : ''} ${router.pathname.startsWith('/projects') ? 'active-nav' : ''}`}>
           <FiLayers size={22} /> {!collapsed &&<span>Projects</span>}
         </Link>
+       
         <Link href="/tasks" className={`mt-3 flex items-center gap-3 p-2 hover:bg-[var(--hover)] rounded ${collapsed ? 'justify-center' : ''} ${router.pathname.startsWith('/tasks') ? 'active-nav' : ''}`}>
           <FiClipboard size={22} /> {!collapsed && <span>My Tasks</span>}
         </Link>
