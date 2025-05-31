@@ -124,7 +124,7 @@ const ProjectsPage = () => {
               <h2 className="text-lg font-semibold">Add New Project</h2>
               <button
                 onClick={() => setShowOffcanvas(false)}
-                className="text-gray-500 hover:text-black text-2xl leading-none"
+                className="text-gray-500  text-2xl leading-none"
               >
                 &times;
               </button>

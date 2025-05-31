@@ -115,7 +115,7 @@ const ProjectRow = ({ project, allMembers, onMembersUpdate }: Props) => {
                 </h2>
                 <button
                   onClick={() => setShowMemberOffcanvas(false)}
-                  className="text-gray-500 hover:text-black text-2xl leading-none"
+                  className="text-gray-500  text-2xl leading-none"
                 >
                   &times;
                 </button>
@@ -179,7 +179,7 @@ const ProjectRow = ({ project, allMembers, onMembersUpdate }: Props) => {
               <div className="flex gap-2 mt-4">
                 <button
                   onClick={() => setShowMemberOffcanvas(false)}
-                  className="flex-1 border border-gray-300 px-4 py-2 rounded hover:bg-gray-100"
+                  className="flex-1 border border-gray-300 px-4 py-2 rounded"
                 >
                   Cancel
                 </button>

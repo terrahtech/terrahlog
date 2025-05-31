@@ -5,10 +5,10 @@
 
 :root {
     --font-poppins: 'Poppins', sans-serif;
-    --primary: #21213b;
+    --primary:  #1c2026;
     --light: #eef1fa;
     --secondary: #b6c4ff;
-    --hover:  #5b5ba2 ;
+    --hover:  #5b5ba2;
     --text-light:#1f2937;
     --card:#fff;
     --warning:#FFCD36;
@@ -19,11 +19,12 @@
 
   }
   :root .dark-mode  {
-    --light: #11112b;
+    --primary: #1c2026;
+    --light: #31363F;
     --secondary: ;
     color: white;
     --text-light:#fff;
-    --card:#191931;
+    --card:#222831;
     --input-bg: #24243a;
     --black:#fff;
 
